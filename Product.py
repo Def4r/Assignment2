@@ -1,5 +1,7 @@
 import random
 from UserChecking import userVI
+from UserChecking import userVII
+from UserChecking import userVIII
 
 class ProductClass:
     
@@ -25,10 +27,10 @@ class ProductClass:
     def BusinessInfo(self):
         self.__productName = input("Whats is the name of your product? :>")
         self.__productCode = userVI("What is the code for your product? :>", 100, 1000)
-        self.__productSalesPrice = userVI("How much would you price your products? CAD ONLY :>", 0, 100000000)
-        self.__manufactorCost = userVI("How much does it cost to make your product? :>", 0, 10000000)
-        self.__stockLevel = userVI("How much do you currently have in your stock?", 0, 100000000)
-        self.__estManufactoredMnthly = userVI("How much do you manufactor every month. This is an Estimate. :>", 0, 10000000)
+        self.__productSalesPrice = userVII("How much would you price your products? CAD ONLY :>", 0)
+        self.__manufactorCost = userVII("How much does it cost to make your product? :>", 0)
+        self.__stockLevel = userVII("How much do you currently have in your stock?", 0)
+        self.__estManufactoredMnthly = userVIII("How much do you manufactor every month. This is an Estimate. :>", 0)
 
     def salesEachMonth(self, salesMonthly):
         randomInc = random.randint(-10 , 10)
