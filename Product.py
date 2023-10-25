@@ -10,6 +10,13 @@ class ProductClass:
         self.__stockLevel = stockLevel
         self.__estManufactoredMnthly = estManufactoredMnthly
 
+    def userVaild(inputP, MinInt, MaxInt):
+        while true:
+            try:
+                num = int(input(inputP))
+                if MinInt <= num <= MaxInt:
+                    return num
+
     def BusinessInfo(self):
         self.__productName = input("Whats is the name of your product? :>")
         self.__productCode = int(input("What is the code for your product? :>"))
