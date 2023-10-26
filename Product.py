@@ -36,11 +36,14 @@ class ProductClass:
         print("")
         print("Amount of Product in stock:", self.__stockLevel, "Units")
         print("Estimated amount manufactored:", self.__estManufactoredMnthly, "Units")
+        print("")
 
-    def salesEachMonth(self):
-        randomInc = random.randint(-10 , 10)
-        salesMonthly = self.__estManufactoredMnthly + randomInc
+    def salesEachMonth(self, RandomSales):
+        salesMonthly = self.__estManufactoredMnthly + RandomSales
         return salesMonthly
+
+    def remainingStock(self, RandomSales):
+        StockLeft = self.__stockLevel - RandomSales
 
     
 
