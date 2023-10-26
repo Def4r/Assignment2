@@ -13,17 +13,6 @@ class ProductClass:
         self.__stockLevel = stockLevel
         self.__estManufactoredMnthly = estManufactoredMnthly
 
-    #def userV(self, inputP, MinInt, MaxInt):
-     #   while true:
-      #      try:
-       #         num = int(input(inputP))
-        #        if MinInt <= num <= MaxInt:
-         #           return num
-          #      else:
-           #         print("Input must be between ", MinInt, " and ", MaxInt, "Try Again.")
-            #except ValueError:
-             #   print("Input recieved is not vaild. Try again.")
-
     def BusinessInfo(self):
         self.__productName = input("Whats is the name of your product? :>")
         self.__productCode = userVI("What is the code for your product? :>", 100, 1000)
@@ -31,6 +20,14 @@ class ProductClass:
         self.__manufactorCost = userVII("How much does it cost to make your product? :>", 0)
         self.__stockLevel = userVII("How much do you currently have in your stock?", 0)
         self.__estManufactoredMnthly = userVIII("How much do you manufactor every month. This is an Estimate. :>", 0)
+
+    def DisplayBusinessInfo(self):
+        print("Product Code:", self.__productCode)
+        print("Product Name:", self.__productName)
+        print("Product Price:","$", self.__productSalesPrice, "CAD")
+        print("Product Manufactor Cost:", "$", self.__manufactorCost, "CAD")
+        print("Amount of Product in stock:", self.__stockLevel, "Units")
+        print("Estimated amount manufactored:", self.__estManufactoredMnthly, "Units")
 
     def salesEachMonth(self, salesMonthly):
         randomInc = random.randint(-10 , 10)

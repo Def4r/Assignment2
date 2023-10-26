@@ -4,6 +4,7 @@ print("***Welcome to the Business Production Sim***")
 
 Business = ProductClass()
 Business.BusinessInfo()
+Business.DisplayBusinessInfo()
 
 
 

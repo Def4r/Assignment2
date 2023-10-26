@@ -24,7 +24,7 @@ def userVIII(inputP, MinInt):
     while True:
         try:
             num = int(input(inputP))
-            if num >+ MinInt:
+            if num >= MinInt:
                 return num
             else:
                 print("Input must be between greater than or equals to ", MinInt, " Try Again.")
