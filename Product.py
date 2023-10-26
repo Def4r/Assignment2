@@ -12,6 +12,12 @@ class ProductClass:
         self.__manufactorCost = manufactorCost
         self.__stockLevel = stockLevel
         self.__estManufactoredMnthly = estManufactoredMnthly
+    
+    def getEstManufactored(self):
+        return self.__estManufactoredMnthly
+    
+    def getStockLvl(self):
+        return self.__stockLevel
 
     def BusinessInfo(self):
         self.__productName = input("Whats is the name of your product? :>")
@@ -22,14 +28,16 @@ class ProductClass:
         self.__estManufactoredMnthly = userVIII("How much do you manufactor every month. This is an Estimate. :>", 0)
 
     def DisplayBusinessInfo(self):
-        print("Product Code:", self.__productCode)
         print("Product Name:", self.__productName)
+        print("Product Code:", self.__productCode)
+        print("")
         print("Product Price:","$", self.__productSalesPrice, "CAD")
         print("Product Manufactor Cost:", "$", self.__manufactorCost, "CAD")
+        print("")
         print("Amount of Product in stock:", self.__stockLevel, "Units")
         print("Estimated amount manufactored:", self.__estManufactoredMnthly, "Units")
 
-    def salesEachMonth(self, salesMonthly):
+    def salesEachMonth(self):
         randomInc = random.randint(-10 , 10)
         salesMonthly = self.__estManufactoredMnthly + randomInc
         return salesMonthly
