@@ -42,8 +42,11 @@ class ProductClass:
         salesMonthly = self.__estManufactoredMnthly + RandomSales
         return salesMonthly
 
-    def remainingStock(self, RandomSales):
-        StockLeft = self.__stockLevel - RandomSales
+    def remainingStock(self, RandomSales, savedStock):
+        if RandomSales > 0:
+            return savedStock - RandomSales
+        elif RandomSales < 0:
+            return savedStock - RandomSales 
 
     
 

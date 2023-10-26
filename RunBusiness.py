@@ -8,13 +8,16 @@ Business = ProductClass()
 Business.BusinessInfo()
 Business.DisplayBusinessInfo()
 
+
+NetProfits = 0
+savedStock = Business.getStockLvl()
 for months in range(1, 13):
     sleep(2)
     sales = random.randint(-10 , 10)
     print("Month",months, ":")
     print("Manufactored: ",Business.getEstManufactored())
     print("Sold ",Business.salesEachMonth(sales))
-    print("Stock Left:", Business.remainingStock(sales))
+    print("Stock Left:", Business.remainingStock(sales, savedStock))
     print("")
 
 
